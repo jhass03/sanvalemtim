@@ -4,39 +4,59 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Para ti ❤️</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css?v=5" />
 </head>
 <body>
   <main class="card">
 
+    <!-- Audio -->
     <audio id="song" preload="auto">
       <source src="music/cancion.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio 😢
     </audio>
 
-    <!-- Pantalla 1: imagen de la canción -->
+    <!-- PANTALLA 1: CANCIÓN -->
     <section id="screenStart" class="screen">
+      <h2>Te dedico esta canción, amor 🎶</h2>
+      <p class="sub">
+        <b>“Glue Song” – beabadoobee</b><br>
+        Ahora sí… dale a <em>Iniciar</em> y veamos qué respondes 💘
+      </p>
+
       <button id="startBtn" class="primary">▶ Iniciar</button>
 
       <div class="media">
-        <img src="img/cancion.jpg" alt="Canción">
+        <img src="img/cancion.jpg" alt="Glue Song - beabadoobee">
       </div>
     </section>
 
-    <!-- Pantalla 2: imagen con la pregunta -->
+    <!-- PANTALLA 2: PREGUNTA (DENTRO DE LA IMAGEN) -->
     <section id="screenQuestion" class="screen hidden">
       <div class="media">
-        <img id="moodImg" src="img/pregunta.jpg" alt="Pregunta">
+        <img id="moodImg" src="img/pregunta.jpg" alt="Pregunta San Valentín">
       </div>
 
       <div class="buttons">
         <button id="yesBtn" class="primary">Sí 💖</button>
-        <button id="noBtn" class="secondary">No 🙈</button>
+        <button id="noBtn" class="secondary">No  😭</button>
       </div>
 
       <div id="result" class="result hidden">
-        <h3>¡¡SÍÍÍ!! 😍</h3>
-        <p>Prometo hacerte sonreír mucho 💞</p>
+        <h3>¡¡SÍÍÍ!! </h3>
+        <p>
+          Ahora estás amarrada para siempre…<br>
+          aunque los dos sabemos que eso ya lo estabas 💞
+        </p>
+
+        <button id="moreBtn" class="primary" style="margin-top:12px;">
+          Te quiero decir algo más…
+        </button>
       </div>
+    </section>
+
+    <!-- PANTALLA FINAL TE AMO -->
+    <section id="screenLove" class="love hidden" aria-hidden="true">
+      <div class="love-text">TE AMO</div>
     </section>
 
     <footer class="small">Hecho con ❤️</footer>
