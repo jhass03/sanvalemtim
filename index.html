@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Para ti 💘</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <audio id="song" preload="auto">
+      <source src="music/cancion.mp3" type="audio/mpeg">
+    </audio>
+
+    <section id="screenStart" class="screen">
+      <h1>Hola tú 💖</h1>
+      <p>Tengo algo para decirte…</p>
+      <button id="startBtn">▶ Iniciar</button>
+    </section>
+
+    <section id="screenDedication" class="screen hidden">
+      <h2>Te dedico esta canción 🎶</h2>
+      <img src="img/dedicatoria.gif" alt="dedicatoria">
+      <button id="nextBtn">Siguiente 💌</button>
+    </section>
+
+    <section id="screenQuestion" class="screen hidden">
+      <h2>¿Quieres ser mi San Valentín? 💘</h2>
+      <img id="moodImg" src="img/no1.gif">
+
+      <div>
+        <button id="yesBtn">Sí 💖</button>
+        <button id="noBtn">No 🙈</button>
+      </div>
+
+      <div id="result" class="hidden">
+        <h3>¡¡SÍ!! 😍</h3>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
