@@ -6,8 +6,12 @@ const screenQuestion = document.getElementById("screenQuestion");
 const startBtn = document.getElementById("startBtn");
 const yesBtn = document.getElementById("yesBtn");
 const noBtn  = document.getElementById("noBtn");
+
 const result = document.getElementById("result");
 const moodImg = document.getElementById("moodImg");
+
+const moreBtn = document.getElementById("moreBtn");
+const screenLove = document.getElementById("screenLove");
 
 const noImages = [
   "img/no1.jpg",
@@ -36,11 +40,10 @@ yesBtn.addEventListener("click", () => {
   moodImg.src = yesImage;
   result.classList.remove("hidden");
   noBtn.style.display = "none";
-  yesBtn.textContent = "SÍ 💖";
   confettiBurst();
 });
 
-// Botón NO (máx 5)
+// Botón NO: máximo 5 clicks, se hace más chiquito, y al 5to desaparece
 noBtn.addEventListener("click", () => {
   if (noCount >= 5) return;
 
@@ -52,8 +55,16 @@ noBtn.addEventListener("click", () => {
 
   if (noCount === 5) {
     noBtn.style.opacity = "0";
-    setTimeout(() => noBtn.style.display = "none", 120);
+    setTimeout(() => {
+      noBtn.style.display = "none";
+    }, 150);
   }
+});
+
+// Botón "Te quiero decir algo más…" => muestra TE AMO pantalla completa
+moreBtn.addEventListener("click", () => {
+  document.body.style.overflow = "hidden";
+  screenLove.classList.remove("hidden");
 });
 
 // Confeti
