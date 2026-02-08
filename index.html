@@ -8,35 +8,55 @@
 </head>
 <body>
   <main class="card">
+    <!-- Audio (por reglas del navegador, inicia con clic) -->
     <audio id="song" preload="auto">
       <source src="music/cancion.mp3" type="audio/mpeg">
+      Tu navegador no soporta audio 😢
     </audio>
 
+    <!-- Pantalla 1 -->
     <section id="screenStart" class="screen">
       <h1>Hola tú 💖</h1>
-      <p>Tengo algo para decirte…</p>
-      <button id="startBtn">▶ Iniciar</button>
+      <p class="sub">Tengo algo para decirte… pero primero dale play 😌</p>
+      <button id="startBtn" class="primary">▶ Iniciar</button>
+      <p class="small">*La música empieza cuando tocas “Iniciar”.</p>
     </section>
 
+    <!-- Pantalla 2 -->
     <section id="screenDedication" class="screen hidden">
       <h2>Te dedico esta canción 🎶</h2>
-      <img src="img/dedicatoria.gif" alt="dedicatoria">
-      <button id="nextBtn">Siguiente 💌</button>
+      <p class="sub">Porque me haces sentir cosas bonitas.</p>
+
+      <div class="media">
+        <img id="dedicationImg" src="img/dedicatoria.jpg" alt="Dedicatoria">
+      </div>
+
+      <button id="nextBtn" class="primary">Siguiente 💌</button>
     </section>
 
+    <!-- Pantalla 3 -->
     <section id="screenQuestion" class="screen hidden">
-      <h2>¿Quieres ser mi San Valentín? 💘</h2>
-      <img id="moodImg" src="img/no1.gif">
+      <h2>Pregunta importante… 💘</h2>
+      <p class="sub">¿Quieres ser mi San Valentín?</p>
 
-      <div>
-        <button id="yesBtn">Sí 💖</button>
-        <button id="noBtn">No 🙈</button>
+      <div class="media">
+        <img id="moodImg" src="img/no1.jpg" alt="Reacción">
       </div>
 
-      <div id="result" class="hidden">
-        <h3>¡¡SÍ!! 😍</h3>
+      <div class="buttons">
+        <button id="yesBtn" class="primary">Sí 💖</button>
+        <button id="noBtn" class="secondary">No 🙈</button>
       </div>
+
+      <div id="result" class="result hidden">
+        <h3>¡¡SÍÍÍ!! 😍</h3>
+        <p>Prometo hacerte sonreír mucho. Gracias por existir 💞</p>
+      </div>
+
+      <p class="small">Tip: mientras suena la canción, juega con los botones 😄</p>
     </section>
+
+    <footer class="small">Hecho con 💖</footer>
   </main>
 
   <script src="script.js"></script>
