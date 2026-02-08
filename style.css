@@ -15,7 +15,7 @@ body{
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color:var(--text);
 
-  /* fondo rojo + corazones sutiles */
+  /* fondo rojo con “corazones” sutiles */
   background:
     radial-gradient(circle at 12% 18%, rgba(255,255,255,.10) 2px, transparent 3px),
     radial-gradient(circle at 88% 22%, rgba(255,255,255,.08) 2px, transparent 3px),
@@ -37,11 +37,10 @@ body{
 
 .hidden{ display:none; }
 
-h1,h2,h3{ margin:10px 0 8px; }
+h2,h3{ margin:10px 0 8px; }
 .sub{ margin:0 0 14px; opacity:.85; }
 .small{ font-size:12px; opacity:.7; margin-top:10px; }
 
-/* contenedor de imagen */
 .media{
   border-radius:18px;
   overflow:hidden;
@@ -50,19 +49,13 @@ h1,h2,h3{ margin:10px 0 8px; }
   margin:14px 0 16px;
 }
 
-/* ✅ AQUÍ ESTÁ LA CLAVE PARA QUE NO SE RECORTE */
+/* imagen completa sin recorte */
 .media img{
   width:100%;
-  height:auto !important;        /* fuerza proporción */
-  max-height:none !important;    /* quita límites raros */
-  object-fit:contain !important; /* nunca recorta */
+  height:auto !important;
+  max-height:70vh !important;
+  object-fit:contain !important;
   display:block;
-}
-
-/* para imágenes horizontales (como tu captura) hacemos el marco más alto */
-@media (max-width: 600px){
-  .card{ width:min(94vw, 560px); }
-  .media img{ max-height: 70vh !important; } /* en celular ocupa más pantalla */
 }
 
 .buttons{
@@ -95,4 +88,30 @@ button:active{ transform: scale(.97); }
   border-radius:16px;
   background:#fff;
   border:1px solid rgba(0,0,0,.1);
+}
+
+/* PANTALLA TE AMO */
+.love{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(160deg, #7a0c0c, #180606);
+  display:grid;
+  place-items:center;
+  z-index:9999;
+}
+
+.love-text{
+  font-size:clamp(4rem, 18vw, 10rem);
+  font-weight:900;
+  color:white;
+  letter-spacing:.12em;
+  text-shadow:
+    0 10px 30px rgba(0,0,0,.6),
+    0 0 40px rgba(255,255,255,.25);
+  animation:pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse{
+  0%,100%{ transform:scale(1); }
+  50%{ transform:scale(1.06); }
 }
